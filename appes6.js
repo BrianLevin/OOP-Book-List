@@ -85,6 +85,8 @@ static displayBooks() {
   }
   }
 
+ // DOM Load Event
+document.addEventListener('DOMContentLoaded', Store.displayBooks);
 
   
   // Event Listener for add book
