@@ -46,12 +46,22 @@ document.getElementById('book-form').addEventListener('submit', function(e){
   // Instantiate UI
   const ui = new UI();
 
-  
-  // Add book to list
-  ui.addBookToList(book);
+   // Validate
+   if(title === '' || author === '' || isbn === '') {
+    // Error alert
+    ui.showAlert('Please fill in all fields', 'error');
+  } else {
+// Add book to list
+ui.addBookToList(book);
 
- // Clear fields
-  ui.clearFields();
+// Clear fields
+ ui.clearFields();
+
+  }
+
+  
+
+  
 
   e.preventDefault();
 });
