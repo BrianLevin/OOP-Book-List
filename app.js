@@ -17,5 +17,8 @@ document.getElementById('book-form').addEventListener('submit', function(e){
           author = document.getElementById('author').value,
           isbn = document.getElementById('isbn').value
 
+           // Instantiate book
+  const book = new Book(title, author, isbn);
+
 
 });
