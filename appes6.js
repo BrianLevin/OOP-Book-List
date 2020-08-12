@@ -54,6 +54,21 @@ class Book {
       document.getElementById('isbn').value = '';
     }
   }
+class Store {
+  static getBooks() {
+    let books;
+    if(localStorage.getItem('books') === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+
+    return books;
+  }
+
+  }
+
+
   
   // Event Listener for add book
   document.getElementById('book-form').addEventListener('submit', function(e){
@@ -87,6 +102,8 @@ class Book {
   
     e.preventDefault();
   });
+
+
   
   // Event Listener for delete
   document.getElementById('book-list').addEventListener('click', function(e){
