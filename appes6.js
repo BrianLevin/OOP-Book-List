@@ -132,6 +132,9 @@ document.addEventListener('DOMContentLoaded', Store.displayBooks);
   
     // Delete book
     ui.deleteBook(e.target);
+
+      // Remove from LS
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
   
     // Show message
     ui.showAlert('Book Removed!', 'success');
